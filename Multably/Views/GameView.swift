@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct GameView: View {
+    
+    @State private var question = "Some question"
+    @State private var playerAnswer = ""
+    @State private var isGameActive = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack() {
+            
+            // Go to settings view
+            
+        }
+        .padding()
+        .toolbar {
+            ToolbarItem(id: "Settings", placement: .topBarTrailing) {
+                NavigationLink(destination: SettingsView()) {
+                    Image(systemName: "gearshape.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                }
+            }
+        }
     }
 }
 
