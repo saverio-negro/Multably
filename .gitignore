@@ -6,6 +6,9 @@
 xcuserdata/
 .DS_Store
 
+## Notes
+Notes.md
+
 ## Obj-C/Swift specific
 *.hmap
 
