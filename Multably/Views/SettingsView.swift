@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    var settings: Settings
     let numQuestions = [5, 10, 20]
     @State private var selectedNumQuestions = 5
     @State private var selectedTable = 2
@@ -34,5 +35,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(settings: Settings())
 }

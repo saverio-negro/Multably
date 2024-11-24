@@ -15,13 +15,9 @@ struct MenuView: View {
         NavigationStack {
             ZStack {
                 VStack {
-                    Button("Play") {
-                        
-                    }
+                    NavigationLink("Play", destination: GameView(settings: settings))
                     
-                    Button("Settings") {
-                        
-                    }
+                    NavigationLink("Settings", destination: SettingsView(settings: settings))
                     
                     Button("Exit") {
                         

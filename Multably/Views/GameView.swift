@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     
+    var settings: Settings
     @State private var question = "Some question"
     @State private var playerAnswer = ""
     @State private var isGameActive = false
@@ -22,7 +23,7 @@ struct GameView: View {
         .padding()
         .toolbar {
             ToolbarItem(id: "Settings", placement: .topBarTrailing) {
-                NavigationLink(destination: SettingsView()) {
+                NavigationLink(destination: SettingsView(settings: settings)) {
                     Image(systemName: "gearshape.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
@@ -33,5 +34,5 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView()
+    GameView(settings: Settings())
 }
